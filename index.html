@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The girl who loves tulips 🌷</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Georgia,serif;
+background:linear-gradient(135deg,#fff4f8,#fff9fc);
+color:#654455;
+text-align:center;
+}
+
+.card{
+width:90%;
+max-width:550px;
+padding:35px 25px;
+background:white;
+border-radius:30px;
+box-shadow:0 15px 50px rgba(120,70,90,.18);
+}
+
+.tulips{
+font-size:50px;
+margin-bottom:10px;
+}
+
+h1{
+color:#a45b78;
+font-size:36px;
+}
+
+p{
+font-size:19px;
+line-height:1.8;
+}
+
+button{
+border:0;
+padding:14px 25px;
+border-radius:30px;
+background:#b86b8c;
+color:white;
+font-size:17px;
+cursor:pointer;
+}
+
+.page{
+display:none;
+}
+
+.page.active{
+display:block;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="page active" id="page1">
+<div class="tulips">🌷🌷🌷</div>
+
+<h1>The girl who loves tulips 🌷</h1>
+
+<p>
+There is a little surprise waiting for you...
+</p>
+
+<button onclick="nextPage(2)">
+Open your gift ✨
+</button>
+</div>
+
+
+<div class="page" id="page2">
+
+<div class="tulips">🌷</div>
+
+<h1>For you 🤍</h1>
+
+<p>
+This little surprise was made especially for you.
+<br><br>
+So... are you ready?
+</p>
+
+<button onclick="nextPage(3)">
+Continue 💗
+</button>
+
+</div>
+
+
+<div class="page" id="page3">
+
+<div class="tulips">🌷🌷🌷</div>
+
+<h1>Happy Birthday 🎂</h1>
+
+<p>
+18 • 09 • 2010
+</p>
+
+<p>
+I hope your birthday is filled with happiness,
+beautiful moments and memories you'll never forget. 🤍
+<br><br>
+And whenever you see a tulip,
+maybe you'll remember this little surprise. 🌷
+</p>
+
+<button onclick="nextPage(4)">
+One last thing… 🎁
+</button>
+
+</div>
+
+
+<div class="page" id="page4">
+
+<div class="tulips">🌷</div>
+
+<h1>Your gift 🎁</h1>
+
+<p>
+Happy Birthday to the girl who loves tulips. 🌷
+<br><br>
+I hope this little page made you smile. 🤍
+<br><br>
+✨ Happy Birthday ✨
+</p>
+
+<div style="font-size:50px;">
+🤍🌷🤍
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function nextPage(number){
+
+document.querySelectorAll(".page").forEach(function(page){
+page.classList.remove("active");
+});
+
+document.getElementById("page"+number).classList.add("active");
+
+}
+
+</script>
+
+</body>
+</html>
